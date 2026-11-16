@@ -8201,6 +8201,7 @@ function returnToTitle() {
 }
 
 function startAct0() {
+  loadA5Hands()   // 手部贴图在标题画面就预热：等到第五幕才下载的话，reach 动画只有 1.4 秒，慢网络下来不及显示
   // debug switch: skip Act 0 entirely (flip DEBUG_START_AT_ACT1 to false to restore)
   if (location.search.indexOf('start=act0') < 0 && DEBUG_START_AT_ACT4) { startFinal(); return }
   if (location.search.indexOf('start=act0') < 0 && DEBUG_START_AT_ACT3) { startAct3(); return }
